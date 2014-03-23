@@ -35,22 +35,37 @@ namespace Checkpoints
     // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 48191, uint256("0x4499f469507e9dbd2850b65dd7db62429b3fecb207b1abbd785ae84c11c793cf"))
+        (  0, uint256("0x99c57e693235f6b481a926340b3b004276bfa232b1939faaded9e3a9d9bcbd1b"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        1394891781, // * UNIX timestamp of last checkpoint block
-        48454,      // * total number of transactions between genesis and last checkpoint
+        1395443646, // * UNIX timestamp of last checkpoint block
+        0,    // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        633.4       // * estimated number of transactions per day after checkpoint
+        0.0     // * estimated number of transactions per day after checkpoint
+    };
+
+    static MapCheckpoints mapCheckpointsTestnet = 
+        boost::assign::map_list_of
+        (   546, uint256("000000002a936ca763904c3c35fce2f3556c559c0214345d31b1bcebf76acb70"))
+        ;
+    static const CCheckpointData dataTestnet = {
+        &mapCheckpointsTestnet,
+        1369685559,
+        37581,
+        300
     };
 
     const CCheckpointData &Checkpoints() {
-        return data;
+        if (fTestNet)
+            return dataTestnet;
+        else
+            return data;
     }
 
     bool CheckBlock(int nHeight, const uint256& hash)
     {
+        return true; // TODO disable checkpoints
         if (fTestNet) return true; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return true;
@@ -64,7 +79,7 @@ namespace Checkpoints
 
     // Guess how far we are in the verification process at the given block index
     double GuessVerificationProgress(CBlockIndex *pindex) {
-        if (fTestNet) return 0.0; // Testnet has no checkpoints
+        return 0.0; // TODO
         if (pindex==NULL)
             return 0.0;
 
@@ -96,6 +111,7 @@ namespace Checkpoints
 
     int GetTotalBlocksEstimate()
     {
+        return 0; // TODO
         if (fTestNet) return 0; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return 0;
@@ -107,6 +123,7 @@ namespace Checkpoints
 
     CBlockIndex* GetLastCheckpoint(const std::map<uint256, CBlockIndex*>& mapBlockIndex)
     {
+        return NULL; // TODO
         if (fTestNet) return NULL; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return NULL;

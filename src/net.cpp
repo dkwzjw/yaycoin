@@ -1112,7 +1112,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "Sha1coin " + FormatFullVersion();
+        string strDesc = "yaycoin " + FormatFullVersion();
 
         try {
             loop {
@@ -1192,12 +1192,10 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"sighash.info", "shaseed.sighash.info"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"sighash.info", "shaseed.sighash.info"}, // TODO
     {NULL, NULL}
 };
 
@@ -1235,32 +1233,6 @@ void ThreadDNSAddressSeed()
 
 unsigned int pnSeed[] =
 {
-    0x021ba972,
-    0x0773bddd,
-    0x102e877a,
-    0x1c28c27d,
-    0x30766cdc,
-    0x5fe6f285,
-    0x6289163d,
-    0x64ae547c,
-    0x99840224,
-    0x9c7c92dc,
-    0x9ee9c27d,
-    0xa60797dc,
-    0xade8367d,
-    0xb9f1b1bf,
-    0xbd7843db,
-    0xbe4cad6a,
-    0xbe7764dc,
-    0xc37843db,
-    0xc7241b7c,
-    0xc9c33724,
-    0xd41b6e79,
-    0xd7cf79dd,
-    0xdbed417e,
-    0xdf6e4173,
-    0xe8706679,
-    0xee3bb173
 };
 
 void DumpAddresses()
@@ -1693,7 +1665,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. Sha1coin is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. yaycoin is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());
