@@ -32,7 +32,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #endif
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Sha1coin address (e.g. SQqr32xpK6hkmDyJRvPLaLFzqzfjq1Dr6f)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a yaycoin address (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)"));
 #endif
 
     addEntry();

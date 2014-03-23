@@ -24,11 +24,11 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a Sha1coin address (e.g. SQqr32xpK6hkmDyJRvPLaLFzqzfjq1Dr6f)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a yaycoin address (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a Sha1coin address (e.g. SQqr32xpK6hkmDyJRvPLaLFzqzfjq1Dr6f)"));
-    ui->signatureIn_VM->setPlaceholderText(tr("Enter Sha1coin signature"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a yaycoin address (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)"));
+    ui->signatureIn_VM->setPlaceholderText(tr("Enter yaycoin signature"));
 #endif
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);
