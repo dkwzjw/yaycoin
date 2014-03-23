@@ -8,10 +8,8 @@ IDI_ICON2 ICON DISCARDABLE "icons/bitcoin_testnet.ico"
 #define VER_PRODUCTVERSION_STR STRINGIZE(CLIENT_VERSION_MAJOR) "." STRINGIZE(CLIENT_VERSION_MINOR) "." STRINGIZE(CLIENT_VERSION_REVISION) "." STRINGIZE(CLIENT_VERSION_BUILD)
 #define VER_FILEVERSION        VER_PRODUCTVERSION
 #define VER_FILEVERSION_STR    VER_PRODUCTVERSION_STR
-#define COPYRIGHT_STR          "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin developers" \
-                               " 2011-" STRINGIZE(COPYRIGHT_YEAR) " The Litecoin developers" \
-                               " 2013-" STRINGIZE(COPYRIGHT_YEAR) " The Dr. Kimoto Chan" \
-                               " 2013-" STRINGIZE(COPYRIGHT_YEAR) " The Sha1coin developers"
+#define COPYRIGHT_STR          "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin developers 2011-" STRINGIZE(COPYRIGHT_YEAR) " The Litecoin developers"
+// TODO
 
 VS_VERSION_INFO VERSIONINFO
 FILEVERSION     VER_FILEVERSION
@@ -23,14 +21,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Sha1coin"
-            VALUE "FileDescription",    "Sha1coin-Qt (OSS GUI client for Sha1coin)"
+            VALUE "CompanyName",        "yaycoin"
+            VALUE "FileDescription",    "yaycoin-Qt (OSS GUI client for yaycoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "sha1coin-qt"
+            VALUE "InternalName",       "yaycoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "sha1coin-qt.exe"
-            VALUE "ProductName",        "Sha1coin-Qt"
+            VALUE "OriginalFilename",   "yaycoin-qt.exe"
+            VALUE "ProductName",        "yaycoin-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
