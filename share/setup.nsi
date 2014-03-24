@@ -1,4 +1,4 @@
-Name Sha1coin
+Name yaycoin
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,8 +6,8 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.8.6.2
-!define COMPANY "Sha1coin project"
-!define URL http://ohac.github.io/sha1coin
+!define COMPANY "yaycoin project"
+!define URL https://github.com/dkwzjw/yaycoin/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/bitcoin.ico"
@@ -19,8 +19,8 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Sha1coin
-!define MUI_FINISHPAGE_RUN $INSTDIR\sha1coin-qt.exe
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER yaycoin
+!define MUI_FINISHPAGE_RUN $INSTDIR\yaycoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,14 +45,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile sha1coin-0.8.6.2-win32-setup.exe
-InstallDir $PROGRAMFILES\Sha1coin
+OutFile yaycoin-0.8.6.2-win32-setup.exe
+InstallDir $PROGRAMFILES\yaycoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion 0.8.6.2
-VIAddVersionKey ProductName Sha1coin
+VIAddVersionKey ProductName yaycoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ../release/sha1coin-qt.exe
+    File ../release/yaycoin-qt.exe
     File /oname=COPYING.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/sha1coind.exe
+    File ../src/yaycoind.exe
     SetOutPath $INSTDIR\src
     File /r /x *.exe /x *.o ../src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\sha1coin.exe
+    Delete /REBOOTOK $INSTDIR\yaycoin.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,8 +87,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Sha1coin.lnk" $INSTDIR\sha1coin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Sha1coin.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\yaycoin.lnk" $INSTDIR\yaycoin-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall yaycoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -98,10 +98,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "sha1coin" "URL Protocol" ""
-    WriteRegStr HKCR "sha1coin" "" "URL:Sha1coin"
-    WriteRegStr HKCR "sha1coin\DefaultIcon" "" $INSTDIR\sha1coin-qt.exe
-    WriteRegStr HKCR "sha1coin\shell\open\command" "" '"$INSTDIR\sha1coin-qt.exe" "%1"'
+    WriteRegStr HKCR "yaycoin" "URL Protocol" ""
+    WriteRegStr HKCR "yaycoin" "" "URL:yaycoin"
+    WriteRegStr HKCR "yaycoin\DefaultIcon" "" $INSTDIR\yaycoin-qt.exe
+    WriteRegStr HKCR "yaycoin\shell\open\command" "" '"$INSTDIR\yaycoin-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -119,7 +119,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\sha1coin-qt.exe
+    Delete /REBOOTOK $INSTDIR\yaycoin-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -129,9 +129,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Sha1coin.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Sha1coin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Sha1coin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall yaycoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\yaycoin.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\yaycoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "sha1coin"
+    DeleteRegKey HKCR "yaycoin"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0
