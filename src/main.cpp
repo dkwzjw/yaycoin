@@ -1173,7 +1173,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     CBigNum bnNew;
     bnNew.SetCompact(pindexLast->nBits);
     
-	// thanks to RealSolid & WDC for this code
+	// DigiByte: thanks to RealSolid & WDC for this code
 		if(fNewDifficultyProtocol) {
 		  
 			if (nActualTimespan < (retargetTimespan - (retargetTimespan/4)) ) nActualTimespan = (retargetTimespan - (retargetTimespan/4));

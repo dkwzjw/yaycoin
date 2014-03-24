@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Sha1coin</source>
-        <translation>Sha1coinについて</translation>
+        <source>About yaycoin</source>
+        <translation>yaycoinについて</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Sha1coin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Sha1coin&lt;/b&gt; バージョン</translation>
+        <source>&lt;b&gt;yaycoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;yaycoin&lt;/b&gt; バージョン</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -29,7 +29,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Sha1coin developers</source>
+        <source>The yaycoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -62,7 +62,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Sha1coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your yaycoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -77,7 +77,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Sha1coin address</source>
+        <source>Sign a message to prove you own a yaycoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -102,7 +102,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Sha1coin address</source>
+        <source>Verify a message to ensure it was signed with a specified yaycoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -117,7 +117,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Sha1coin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your yaycoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -270,7 +270,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Sha1coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sha1coins from being stolen by malware infecting your computer.</source>
+        <source>yaycoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your yaycoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -369,8 +369,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Sha1coin</source>
-        <translation>Sha1coinに関する情報を見る</translation>
+        <source>Show information about yaycoin</source>
+        <translation>yaycoinに関する情報を見る</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -414,13 +414,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Sha1coin address</source>
-        <translation>Sha1coinのアドレスへコインを送る</translation>
+        <source>Send coins to a yaycoin address</source>
+        <translation>yaycoinのアドレスへコインを送る</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Sha1coin</source>
-        <translation>Sha1coinの設定オプションを変更する</translation>
+        <source>Modify configuration options for yaycoin</source>
+        <translation>yaycoinの設定オプションを変更する</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -450,7 +450,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Sha1coin</source>
+        <source>yaycoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -475,8 +475,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Sha1coin</source>
-        <translation>Sha1coinについて(&amp;A)</translation>
+        <source>&amp;About yaycoin</source>
+        <translation>yaycoinについて(&amp;A)</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -495,12 +495,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Sha1coin addresses to prove you own them</source>
+        <source>Sign messages with your yaycoin addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Sha1coin addresses</source>
+        <source>Verify messages to ensure they were signed with specified yaycoin addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -531,14 +531,14 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>Sha1coin client</source>
-        <translation>Sha1coinクライアント</translation>
+        <source>yaycoin client</source>
+        <translation>yaycoinクライアント</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Sha1coin network</source>
+        <source>%n active connection(s) to yaycoin network</source>
         <translation>
-            <numerusform>Sha1coinネットワークへのアクティブなコネクション数: %n</numerusform>
+            <numerusform>yaycoinネットワークへのアクティブなコネクション数: %n</numerusform>
         </translation>
     </message>
     <message>
@@ -659,7 +659,7 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Sha1coin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid yaycoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -674,7 +674,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Sha1coin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. yaycoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -740,8 +740,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sha1coin address.</source>
-        <translation>入力したアドレス「%1」は正しいSha1coinアドレスではありません。</translation>
+        <source>The entered address &quot;%1&quot; is not a valid yaycoin address.</source>
+        <translation>入力したアドレス「%1」は正しいyaycoinアドレスではありません。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -759,7 +759,7 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Sha1coin-Qt</source>
+        <source>yaycoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -822,13 +822,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Sha1coin after logging in to the system.</source>
-        <translation>立ち上げ時にSha1coinを自動的に実行します。</translation>
+        <source>Automatically start yaycoin after logging in to the system.</source>
+        <translation>立ち上げ時にyaycoinを自動的に実行します。</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sha1coin on system login</source>
-        <translation>Sha1coinを自動的に実行(&amp;S)</translation>
+        <source>&amp;Start yaycoin on system login</source>
+        <translation>yaycoinを自動的に実行(&amp;S)</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -847,7 +847,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sha1coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the yaycoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -857,7 +857,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sha1coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the yaycoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -932,7 +932,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sha1coin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting yaycoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -947,7 +947,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Sha1coin addresses in the transaction list or not.</source>
+        <source>Whether to show yaycoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -999,7 +999,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Sha1coin.</source>
+        <source>This setting will take effect after restarting yaycoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1018,7 +1018,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sha1coin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the yaycoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1072,7 +1072,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start sha1coin: click-to-pay handler</source>
+        <source>Cannot start yaycoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1222,7 +1222,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Sha1coin-Qt help message to get a list with possible Sha1coin command-line options.</source>
+        <source>Show the yaycoin-Qt help message to get a list with possible yaycoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1242,12 +1242,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Sha1coin - Debug window</source>
+        <source>yaycoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Sha1coin Core</source>
+        <source>yaycoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1257,7 +1257,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Sha1coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the yaycoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1267,7 +1267,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Sha1coin RPC console.</source>
+        <source>Welcome to the yaycoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1451,7 +1451,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Sha1coin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a yaycoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1516,7 +1516,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sha1coin address</source>
+        <source>Sign the message to prove you own this yaycoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1552,7 +1552,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Sha1coin address</source>
+        <source>Verify the message to ensure it was signed with the specified yaycoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1568,7 +1568,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Sha1coin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a yaycoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1578,7 +1578,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Sha1coin signature</source>
+        <source>Enter yaycoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1652,8 +1652,8 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Sha1coin developers</source>
-        <translation>The Sha1coin developers</translation>
+        <source>The yaycoin developers</source>
+        <translation>The yaycoin developers</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2190,8 +2190,8 @@ Address: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Sha1coin version</source>
-        <translation>Sha1coinバージョン</translation>
+        <source>yaycoin version</source>
+        <translation>yaycoinバージョン</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2200,7 +2200,7 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or sha1coind</source>
+        <source>Send command to -server or yaycoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2220,12 +2220,12 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: sha1coin.conf)</source>
+        <source>Specify configuration file (default: yaycoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: sha1coind.pid)</source>
+        <source>Specify pid file (default: yaycoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2303,13 +2303,13 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=sha1coinrpc
+rpcuser=yaycoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;yaycoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2325,7 +2325,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Sha1coin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. yaycoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2370,7 +2370,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sha1coin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong yaycoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2620,7 +2620,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Sha1coin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the yaycoin Wiki for SSL setup instructions)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2810,12 +2810,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sha1coin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of yaycoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Sha1coin to complete</source>
+        <source>Wallet needed to be rewritten: restart yaycoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2875,7 +2875,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Sha1coin Alert&quot; admin@foo
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Sha1coin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. yaycoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

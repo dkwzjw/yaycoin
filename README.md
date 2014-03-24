@@ -5,28 +5,25 @@ http://ohac.github.io/sha1coin/
 
 Copyright (c) 2009-2013 Bitcoin Developers
 Copyright (c) 2011-2013 Litecoin Developers
-Copyright (c) 2013-2014 Dr. Kimoto Chan
+Copyright (c) 2013 DigiByte Developers
 Copyright (c) 2013-2014 Sha1coin Developers
+Copyright (c) 2014 yaycoin Developers
 
-What is Sha1coin?
+What is yaycoin?
 ----------------
 
-Sha1coin is a lite version of Bitcoin using SHA-1 as a proof-of-work algorithm.
- - 2.5 minute block targets
- - subsidy halves in 840k blocks (~4 years)
- - ~84 million total coins
-
-The rest is the same as Bitcoin.
- - 50 coins per block
- - 2016 blocks to retarget difficulty
+yaycoin is a lite version of Bitcoin using SHA-1 algorithm.
+ - 1 minute block targets
+ - 1 coin + diff bonus per block
+ - every blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of
-the Sha1coin client sofware, see http://ohac.github.io/sha1coin/.
+the yaycoin client sofware, see https://github.com/dkwzjw/yaycoin.
 
 License
 -------
 
-Sha1coin is released under the terms of the MIT license. See `COPYING` for more
+yaycoin is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
 
 Development process
