@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0xb394336b1e5a1134e264265df4955896fcc1b22276e7fa084017ad526f38bf43");
+uint256 hashGenesisBlock("0xf790afc072385c361d42d5ceca03d49776e317445021d8a56dbc4cbeb60ddfda");
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // yaycoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -54,9 +54,9 @@ bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-int64 CTransaction::nMinTxFee = 100000;
+int64 CTransaction::nMinTxFee = 10000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = 100000;
+int64 CTransaction::nMinRelayTxFee = 1000;
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -1080,7 +1080,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, int nBits)
     double dDiff =
         (double)0x0000ffff / (double)(nBits & 0x00ffffff);
 
-    int64 nSubsidy = (dDiff)*1000000/2 + nBlockRewardStartCoin;
+    int64 nSubsidy = (dDiff)*pow(10.0,6.0)/2 + nBlockRewardStartCoin;
 
     //printf("height %u diff %4.2f reward %i \n", nHeight, dDiff, nSubsidy);
     return nSubsidy + nFees;
@@ -1717,10 +1717,12 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     int64 nTime = GetTimeMicros() - nStart;
     if (fBenchmark)
         printf("- Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin)\n", (unsigned)vtx.size(), 0.001 * nTime, 0.001 * nTime / vtx.size(), nInputs <= 1 ? 0 : 0.001 * nTime / (nInputs-1));
-/*
+
+/*  // yaycoin comment out
     if (vtx[0].GetValueOut() > GetBlockValue(pindex->nHeight, nFees, pindex->nBits))
         return state.DoS(100, error("ConnectBlock() : coinbase pays too much (actual=%"PRI64d" vs limit=%"PRI64d")", vtx[0].GetValueOut(), GetBlockValue(pindex->nHeight, nFees, pindex->nBits)));
 */
+
     if (!control.Wait())
         return state.DoS(100, false);
     int64 nTime2 = GetTimeMicros() - nStart;
@@ -2772,22 +2774,22 @@ bool InitBlockIndex() {
     // Only add the genesis block if not reindexing (in which case we reuse the one already on disk)
     if (!fReindex) {
         // Genesis block
-        const char* pszTimestamp = "NY Times 27/Dec/2013 Judge Upholds N.S.A.’s Bulk Collection of Data on Calls";
+        const char* pszTimestamp = "NY Times 22/Mar/2014 Israel Announces Discovery of a Tunnel Stretching From Gaza";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 50 * COIN;
+        txNew.vout[0].nValue = 0 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1388281107;
+        block.nTime    = 1395612698;
         block.nBits    = 0x1e0ffff0;
-#if 1
-        block.nNonce   = 1110492;
+#if 0
+        block.nNonce   = 864583;
 #else
         uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
         for (int nn = 0;; nn++) {
@@ -2810,7 +2812,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x391cd45196d50430a8aa274b17cd6394c0db36fbfc700db9dbd1e1069ce15137"));
+        assert(block.hashMerkleRoot == uint256("0xb89dc9e649b86673f00d1eb69ddd288c1b9a43c3043cc9a7f1e04ed8d61af0e1"));
         block.print();
         assert(hash == hashGenesisBlock);
 
@@ -4660,7 +4662,6 @@ void static Sha1coinMiner(CWallet *pwallet)
     const char* trip = mapArgs.count("-trip") ? mapArgs["-trip"].c_str() : NULL;
     const int triplen = trip == NULL ? 0 : strlen(trip);
     uint32_t searchchunk = trip == NULL ? 0 : (decodeb64chunk(trip) & 0x00ffffff);
-
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
@@ -4726,7 +4727,9 @@ void static Sha1coinMiner(CWallet *pwallet)
                         if (memcmp(output2, trip, triplen) == 0) {
                             char tripkey[13] = "";
                             memcpy(tripkey, &str[i], 12);
-                            printf("tripkey: #%s, trip: %s\n", tripkey, output2);
+
+                            // yaycoin: Remove trip print
+                            // printf("tripkey: #%s, trip: %s\n", tripkey, output2);
                         }
                     }
                     hash[0] ^= prehash[0];
