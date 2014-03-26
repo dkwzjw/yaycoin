@@ -59,7 +59,7 @@ h1,h2, h3 {
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 40px;
 }
 
 h2 {
@@ -162,8 +162,14 @@ p img {
 
 code, pre {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color:#000;
-  font-size:14px;
+	color:#000;
+	font-size:14px;
+	background-color: #EEE;
+	display: block;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
 }
 
 pre {
@@ -418,4 +424,9 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+.donate {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FDFEFB;
 }
