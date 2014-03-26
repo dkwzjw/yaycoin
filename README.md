@@ -1,4 +1,4 @@
-Sha1coin integration/staging tree
+yaycoin integration/staging tree
 ================================
 
 http://ohac.github.io/sha1coin/
@@ -12,9 +12,9 @@ Copyright (c) 2014 yaycoin Developers
 What is yaycoin?
 ----------------
 
-yaycoin is a lite version of Bitcoin using SHA-1 algorithm.
- - 1 minute block targets
- - 1 coin + diff bonus per block
+yaycoin is a lite version of Bitcoin using SHA-1 as a proof-of-work algorithm.
+ - 30 seconds block targets
+ - about difficulty x 100 coins per block
  - every blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of

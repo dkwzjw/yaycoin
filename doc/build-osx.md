@@ -1,4 +1,4 @@
-Mac OS X sha1coind build instructions
+Mac OS X yaycoind build instructions
 ====================================
 
 Authors
@@ -26,7 +26,7 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building Sha1coin-Qt, the
+See `doc/readme-qt.rst` for instructions on building yaycoin-Qt, the
 graphical user interface.
 
 Tested on OS X 10.5 through 10.8 on Intel processors only. PPC is not
@@ -72,14 +72,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `sha1coind`
+### Building `yaycoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:ohac/sha1coin.git sha1coin
-        cd sha1coin
+        git clone git@github.com:dkwzjw/yaycoin.git yaycoin
+        cd yaycoin
 
-2.  Build sha1coind:
+2.  Build yaycoind:
 
         cd src
         make -f makefile.osx
@@ -107,12 +107,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `sha1coind`
+### Building `yaycoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:ohac/sha1coin.git sha1coin
-        cd sha1coin
+        git clone git@github.com:dkwzjw/yaycoin.git yaycoin
+        cd yaycoin
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -122,7 +122,7 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-3.  Build sha1coind:
+3.  Build yaycoind:
 
         cd src
         make -f makefile.osx
@@ -134,8 +134,8 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A sha1coind binary is not included in the Sha1coin-Qt.app bundle. You can ignore
-this section if you are building `sha1coind` for your own use.
+A yaycoind binary is not included in the yaycoin-Qt.app bundle. You can ignore
+this section if you are building `yaycoind` for your own use.
 
 If you are building `litecond` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -156,30 +156,30 @@ As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
 Download `http://gavinandresen-bitcoin.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of Sha1coin-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of yaycoin-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `Sha1coin-Qt.app` is easy:
+Once dependencies are compiled, creating `yaycoin-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
 Running
 -------
 
-It's now available at `./sha1coind`, provided that you are still in the `src`
+It's now available at `./yaycoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./sha1coind` to get the filename where it should be put, or just try these
+Run `./yaycoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=sha1coinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Sha1coin/sha1coin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Sha1coin/sha1coin.conf"
+    echo -e "rpcuser=yaycoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/yaycoin/yaycoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/yaycoin/yaycoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./sha1coind --help  # for a list of command-line options.
-    ./sha1coind -daemon # to start the sha1coin daemon.
-    ./sha1coind help    # When the daemon is running, to get a list of RPC commands
+    ./yaycoind --help  # for a list of command-line options.
+    ./yaycoind -daemon # to start the yaycoin daemon.
+    ./yaycoind help    # When the daemon is running, to get a list of RPC commands

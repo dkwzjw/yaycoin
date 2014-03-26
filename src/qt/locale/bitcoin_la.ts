@@ -1406,8 +1406,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Inscriptio cui mittere pensitationem (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address to send the payment to (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</source>
+        <translation>Inscriptio cui mittere pensitationem (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a yaycoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Insero inscriptionem yaycoin (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a yaycoin address (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</source>
+        <translation>Insero inscriptionem yaycoin (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</translation>
     </message>
 </context>
 <context>
@@ -1470,8 +1470,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Inscriptio qua signare nuntium (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address to sign the message with (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</source>
+        <translation>Inscriptio qua signare nuntium (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1543,8 +1543,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Inscriptio qua nuntius signatus est (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address the message was signed with (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</source>
+        <translation>Inscriptio qua nuntius signatus est (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a yaycoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Insere inscriptionem yaycoin (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a yaycoin address (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</source>
+        <translation>Insere inscriptionem yaycoin (e.g. YhiwrqKmZiRzZ2FE7TmbC2CwmZpsRZMVvp)</translation>
     </message>
     <message>
         <location line="-2"/>
