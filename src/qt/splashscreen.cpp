@@ -50,8 +50,8 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     pixPaint.setFont(QFont(font, 9*fontFactor));
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line1,copyrightText1);
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line2,copyrightText2);
-    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line3,copyrightText1);
-    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line4,copyrightText2);
+    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line3,copyrightText3);
+    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line4,copyrightText4);
     pixPaint.end();
 
     this->setPixmap(newPixmap);
