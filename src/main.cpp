@@ -1076,11 +1076,10 @@ static const int64 nIntervalRe = nTargetTimespanRe / nTargetSpacingRe; // 1 bloc
 int64 static GetBlockValue(int nHeight, int64 nFees, int nBits)
 {
     double dDiff =
-        (double)0x0000ffff / (double)(nBits & 0x00ffffff);
+       (double)0x0000ffff / (double)(nBits & 0x00ffffff);
 
-    int64 nSubsidy = (dDiff)*pow(10.0,8.0)/2;
+    int64 nSubsidy = dDiff * pow(10.0,10.0) / pow(2.0,8.0);
 
-    //printf("height %u diff %4.2f reward %i \n", nHeight, dDiff, nSubsidy);
     return nSubsidy + nFees;
 }
 
