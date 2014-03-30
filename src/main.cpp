@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0xf790afc072385c361d42d5ceca03d49776e317445021d8a56dbc4cbeb60ddfda");
+uint256 hashGenesisBlock("0x1ca1e8796a447b6bdb2504463cdd0ce4eb4c72f77a43cb9da9378658d094d049");
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // yaycoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -1073,12 +1073,14 @@ static const int64 nTargetTimespanRe = 1 * 30; // 30 seconds
 static const int64 nTargetSpacingRe = 1 * 30; // 30 seconds
 static const int64 nIntervalRe = nTargetTimespanRe / nTargetSpacingRe; // 1 block
 
+static const int64 nBlockRewardStartCoin = 100 * COIN;
+
 int64 static GetBlockValue(int nHeight, int64 nFees, int nBits)
 {
     double dDiff =
        (double)0x0000ffff / (double)(nBits & 0x00ffffff);
 
-    int64 nSubsidy = dDiff * pow(10.0,10.0) / pow(2.0,8.0);
+    int64 nSubsidy = dDiff * pow(10.0,10.0) / pow(2.0,8.0) + nBlockRewardStartCoin;
 
     return nSubsidy + nFees;
 }
@@ -2771,7 +2773,7 @@ bool InitBlockIndex() {
     // Only add the genesis block if not reindexing (in which case we reuse the one already on disk)
     if (!fReindex) {
         // Genesis block
-        const char* pszTimestamp = "NY Times 22/Mar/2014 Israel Announces Discovery of a Tunnel Stretching From Gaza";
+        const char* pszTimestamp = "NY Times 30/Mar/2014 Putin Calls Obama to Discuss Ukraine, White House Says";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2783,10 +2785,10 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1395612698;
+        block.nTime    = 1396136570;
         block.nBits    = 0x1e0ffff0;
-#if 0
-        block.nNonce   = 864583;
+#if 1
+        block.nNonce   = 164599;
 #else
         uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
         for (int nn = 0;; nn++) {
@@ -2809,7 +2811,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0xb89dc9e649b86673f00d1eb69ddd288c1b9a43c3043cc9a7f1e04ed8d61af0e1"));
+        assert(block.hashMerkleRoot == uint256("0x65314b56390883b0862503aada9c4d207bae634fb448067bb12a3997ede306d6"));
         block.print();
         assert(hash == hashGenesisBlock);
 
