@@ -1077,12 +1077,29 @@ static const int64 nBlockRewardStartCoin = 100 * COIN;
 
 int64 static GetBlockValue(int nHeight, int64 nFees, int nBits)
 {
+    unsigned int basenBits = bnProofOfWorkLimit.GetCompact();
+    int nShift = int((basenBits >> 24) & 0xff) - int((nBits >> 24) & 0xff);
     double dDiff =
+       (double)(basenBits & 0x0000ffff) / (double)(nBits & 0x00ffffff);
+    while (nShift > 0)
+    {
+        dDiff *= 256.0;
+        --nShift;
+    }
+    while (nShift < 0)
+    {
+        dDiff /= 256.0;
+        ++nShift;
+    }
+
+    if (nHeight < 5000) 
+    dDiff =
        (double)0x0000ffff / (double)(nBits & 0x00ffffff);
 
     int64 nSubsidy = dDiff * pow(10.0,10.0) / pow(2.0,8.0) + nBlockRewardStartCoin;
 
     return nSubsidy + nFees;
+
 }
 
 //
