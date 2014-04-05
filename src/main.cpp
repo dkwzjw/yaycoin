@@ -1092,10 +1092,6 @@ int64 static GetBlockValue(int nHeight, int64 nFees, int nBits)
         ++nShift;
     }
 
-    if (nHeight < 5000) 
-    dDiff =
-       (double)0x0000ffff / (double)(nBits & 0x00ffffff);
-
     int64 nSubsidy = dDiff * pow(10.0,10.0) / pow(2.0,8.0) + nBlockRewardStartCoin;
 
     return nSubsidy + nFees;
@@ -1734,10 +1730,8 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     if (fBenchmark)
         printf("- Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin)\n", (unsigned)vtx.size(), 0.001 * nTime, 0.001 * nTime / vtx.size(), nInputs <= 1 ? 0 : 0.001 * nTime / (nInputs-1));
 
-/*  // yaycoin comment out
-    if (vtx[0].GetValueOut() > GetBlockValue(pindex->nHeight, nFees, pindex->nBits))
-        return state.DoS(100, error("ConnectBlock() : coinbase pays too much (actual=%"PRI64d" vs limit=%"PRI64d")", vtx[0].GetValueOut(), GetBlockValue(pindex->nHeight, nFees, pindex->nBits)));
-*/
+    if (vtx[0].GetValueOut() > GetBlockValue(pindex->nHeight, nFees, pindex->nBits)*10)
+        return state.DoS(100, error("ConnectBlock() : coinbase pays too much (actual=%"PRI64d" vs limit=%"PRI64d")", vtx[0].GetValueOut(), GetBlockValue(pindex->nHeight, nFees, pindex->nBits)*10));
 
     if (!control.Wait())
         return state.DoS(100, false);
