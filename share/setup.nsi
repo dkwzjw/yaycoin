@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.8.6.5
+!define VERSION 0.8.6.6
 !define COMPANY "yaycoin project"
 !define URL https://github.com/dkwzjw/yaycoin/
 
@@ -45,13 +45,13 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile yaycoin-0.8.6.5-win32-setup.exe
+OutFile yaycoin-0.8.6.6-win32-setup.exe
 InstallDir $PROGRAMFILES\yaycoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 0.8.6.5
+VIProductVersion 0.8.6.6
 VIAddVersionKey ProductName yaycoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
