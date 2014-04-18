@@ -1,9 +1,9 @@
 Building Sha1coin
 
-See doc/readme-qt.rst for instructions on building Sha1coin-Qt,
+See doc/readme-qt.rst for instructions on building yaycoin-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Sha1coin.
+implementation of yaycoin.
 
-See doc/build-*.txt for instructions on building sha1coind,
+See doc/build-*.txt for instructions on building yaycoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of Sha1coin.
+implementation of yaycoin.
