@@ -36,13 +36,14 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
         (  0, uint256("0x99c57e693235f6b481a926340b3b004276bfa232b1939faaded9e3a9d9bcbd1b"))
+        (  70000, uint256("0x96b415cff1ffee8de4e9c96f0053638ff4cc6d3503426eb82926b10146e707e7"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        1395443646, // * UNIX timestamp of last checkpoint block
-        0,    // * total number of transactions between genesis and last checkpoint
+        1398801761, // * UNIX timestamp of last checkpoint block
+        70000,    // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        0.0     // * estimated number of transactions per day after checkpoint
+        2880.0     // * estimated number of transactions per day after checkpoint
     };
 
     static MapCheckpoints mapCheckpointsTestnet = 
@@ -65,7 +66,6 @@ namespace Checkpoints
 
     bool CheckBlock(int nHeight, const uint256& hash)
     {
-        return true; // TODO disable checkpoints
         if (fTestNet) return true; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return true;
@@ -79,7 +79,6 @@ namespace Checkpoints
 
     // Guess how far we are in the verification process at the given block index
     double GuessVerificationProgress(CBlockIndex *pindex) {
-        return 0.0; // TODO
         if (pindex==NULL)
             return 0.0;
 
