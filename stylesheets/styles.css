@@ -430,3 +430,7 @@ footer {
 	padding: 0px;
 	background-color: #FDFEFB;
 }
+.rireki {
+	overflow: scroll;
+	height: 200px;
+}
